@@ -27,10 +27,6 @@ class Controller:
         self.set_start_button_visibility(view, model)
 
     @staticmethod
-    def show_about_view(view):
-        view.view_about.show()
-
-    @staticmethod
     def show_fullscreen(model):
         model.is_fullscreen = True
         model.fullscreen_window.showFullScreen()
@@ -38,14 +34,6 @@ class Controller:
     @staticmethod
     def on_fullscreen_closed(model):
         model.is_fullscreen = False
-
-    @staticmethod
-    def on_button_pressed(button, path):
-        button.setIcon(QIcon(path))
-
-    @staticmethod
-    def on_button_released(button, path):
-        button.setIcon(QIcon(path))
 
     @staticmethod
     def update_last_update_time(model):
@@ -235,7 +223,6 @@ class Controller:
         if model.camera is not None:
             model.camera.release()
             model.camera = None
-        cv2.destroyAllWindows()
         model.flag_is_camera_thread_running = False
 
     @staticmethod

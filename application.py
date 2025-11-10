@@ -7,7 +7,7 @@ from app_controllers.controller import Controller
 from app_models.model import Model
 from app_views.view import View
 
-model_name = "small640.pt"
+model_name = "yolov5l.pt"
 
 
 class App:
